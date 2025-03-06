@@ -9,6 +9,7 @@ export default async function Home() {
         isDevMode={process.env.NODE_ENV === "development"}
         githubEnabled={!!process.env.AUTH_GITHUB_ID}
         entraIdEnabled={!!process.env.AZURE_AD_CLIENT_ID}
+        googleEnabled={!!process.env.GOOGLE_CLIENT_ID}
       />
     </main>
   );

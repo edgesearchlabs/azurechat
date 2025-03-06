@@ -16,6 +16,7 @@ interface LoginProps {
   isDevMode: boolean;
   githubEnabled: boolean;
   entraIdEnabled: boolean;
+  googleEnabled: boolean;
 }
 
 export const LogIn: FC<LoginProps> = (props) => {
@@ -38,6 +39,9 @@ export const LogIn: FC<LoginProps> = (props) => {
         )}
         {props.entraIdEnabled && (
           <Button onClick={() => signIn("azure-ad")}>Microsoft 365</Button>
+        )}
+        {props.googleEnabled && (
+          <Button onClick={() => signIn("google")}>Google Auth</Button>
         )}
         {props.isDevMode && (
           <Button onClick={() => signIn("localdev")}>
